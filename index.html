@@ -12,6 +12,8 @@
     <style>
         body {
             font-family: Poppins, sans-serif;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -23,7 +25,7 @@
         <div class="absolute w{500px} h{500px} bg-cyan-500 rounded-full blur-[200px] opacity-20 border-0 right-0">
         </div>
     </div>
-    <nav class="sticky top-0 bg-slate-900/70 backdrop-blur-xl border-b border-slate-700">
+    <nav class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur-xl border-b border-slate-700">
         <div class="max-w-7xl mx-auto h-20 px-6 flex justify-between items-center">
             <h1 class="text-3xl font-extrabold text-indigo-400">
                 <i class="fa-solid fa-code">
@@ -31,9 +33,10 @@
                 </i>
             </h1>
             <div class="hidden md:flex gap-8 font-medium">
-                <a href="#" class="hover:text-indigo-400 duration-300">Projects</a>
+                <a href="/index.html" class="hover:text-indigo-400 duration-300">Home</a>
+                <a href="/project.html" class="hover:text-indigo-400 duration-300">Projects</a>
                 <a href="#" class="hover:text-indigo-400 duration-300">Features</a>
-                <a href="#" class="hover:text-indigo-400 duration-300">Contact</a>
+                <a href="/contact.html" class="hover:text-indigo-400 duration-300">Contact</a>
             </div>
             <button class="bg-indigo-600 hover:bg-indigo-700 px-5 py-2 rounded-xl">
                 Explore
@@ -41,97 +44,158 @@
         </div>
 
     </nav>
-    <section class="min-h-screen flex items-center">
+    <section class="pb-20 pt-32">
         <div class="max-w-7xl mx-auto px-6">
             <div>
-                <p class="uppercase tracking-[6px] text-indigo-400 font-semibold">
-                    JavaScript + tailwindcss
-                </p>
-                <h1 class="text-6xl font-extrabold mt-6 leading-tight">Build
-                    <span class="text-indigo-400">Amazing</span>
-                    Mini Projects
-                </h1>
-                <p class="text-slate-300 mt-8 max-w-xl">Explore useful JavaScript projects with a clean, modern and
-                    responsive interface. Every project is built using HTML,Tailwind CSS and JavaScript</p>
-                <div class="flex gap-5 mt-10">
-                    <a href="#projects"
-                        class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-xl font-semibold transition">Explore
-                        Projects</a>
-                    <a href="#features"
-                        class="border border-indigo-500 hover:bg-indigo-600 px-8 py-4 rounded-xl transition">Learn
-                        More</a>
+                <div>
+                    <p class="uppercase tracking-[6px] text-indigo-400 font-semibold">
+                        JavaScript + tailwindcss
+                    </p>
+                    <h1 class="text-5xl md:text-6xl  font-extrabold mt-6 leading-tight">Build
+                        <span class="text-indigo-400">Amazing</span>
+                        Mini Projects
+                    </h1>
+                    <p class="text-slate-300 mt-8 max-w-xl lesding-7">Explore useful JavaScript projects with a clean,
+                        modern and
+                        responsive interface. Every project is built using HTML,Tailwind CSS and JavaScript</p>
+                    <div class="flex gap-5 mt-10">
 
+                        <a href="#projects"
+                            class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-xl font-semibold transition">Explore
+                            Projects</a>
+
+
+                    </div>
+                </div>
+
+                <div id="projects" class="mt-20">
+                    <div class="grid gap-6">
+                        <div
+                            class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <a href="Agecal.html" class="font-bold text-xl"> Age Calculator</a>
+                                    <p> Calculate your exact age</p>
+                                </div>
+                                <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
+                                    <i class="fa-solid fa-user-clock text-3xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid gap-6">
+                            <div
+                                class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="calculator.html" class="font-bold text-xl">Calculator</a>
+                                        <p> Fast Calculations</p>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
+                                        <i class="fa-solid fa-calculator text-3xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="grid gap-6">
+                            <div
+                                class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="weather.html" class="font-bold text-xl">Weather App</a>
+                                        <p> Live Weather update</p>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
+                                        <i class="fa-solid fa-cloud-sun text-3xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="grid gap-6">
+                            <div
+                                class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="TodoList.html" class="font-bold text-xl">Todo List</a>
+                                        <p> Live Weather update</p>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
+
+                                        <i class="fa-solid fa-list-check text-3xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="timewatch.html" class="font-bold text-xl">Time Watch</a>
+                                        <p> Live Time update</p>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
+
+                                        <i class="fa-solid fa-clock"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
-            <div class="grid gap-6 mt-3">
-                <div
-                    class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <a href="Agecal.html" class="font-bold text-xl"> Age Calculator</a>
-                            <p> Calculate your exact age</p>
-                        </div>
-                        <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
-                            <i class="fa-solid fa-user-clock text-3xl"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid gap-6">
-                    <div
-                        class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <a href="calculator.html" class="font-bold text-xl">Calculator</a>
-                                <p> Fast Calculations</p>
-                            </div>
-                            <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
-                                <i class="fa-solid fa-calculator text-3xl"></i>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="grid gap-6">
-                    <div
-                        class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <a href="weather.html" class="font-bold text-xl">Weather App</a>
-                                <p> Live Weather update</p>
-                            </div>
-                            <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
-                                <i class="fa-solid fa-cloud-sun text-3xl"></i>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                                <div class="grid gap-6">
-                    <div
-                        class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:scale-105 transition">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <a href="TodoList.html" class="font-bold text-xl">Todo List</a>
-                                <p> Live Weather update</p>
-                            </div>
-                            <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center">
-
-                                <i class="fa-solid fa-list-check text-3xl"></i>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
-        </div>
     </section>
+    <footer class="border-t border-white/10 bg-slate-950/80 backdrop-blur-xl mt-20">
+        <div class="max-w-7xl mx-auto px-6 py-14">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div>
+                    <h2 class="text-2xl font-sxtrabold text-indigo-400"><i class="fa-solid fa-code mr-2"></i>Mini
+                        Projects
+                    </h2>
+                    <p class="text-slate-400 mt-4 leading-7">A collection of useful and creative mini projects
+                        build with HTMl, Tailwind CSS and JavaScript.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-5">Quick Links</h3>
+                    <div class="flex flex-col gap-3 text-slate-400">
+                        <a href="index.html" class="hover:text-indigo-400 transition">Home</a>
+                        <a href="index.html" class="hover:text-indigo-400 transition">Projects</a>
+                        <a href="index.html" class="hover:text-indigo-400 transition">Features</a>
+                        <a href="index.html" class="hover:text-indigo-400 transition">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-5">Let's Connect</h3>
+                    <p class="text-slate-400 mb-5">Have an idea or want to work together? Feel Free to get in touch</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-11 h-11 p-3 rounded-xl bg-white/10 border border-white/20 flex items-center hover:bg-indigo-600 transition">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                        <a href="#"
+                            class="w-11 h-11 p-3 rounded-xl bg-white/10 border border-white/20 flex items-center hover:bg-indigo-600 transition">
+                            <i class="fa-brands fa-envelope text-lg"></i>
+                        </a>
 
+                    </div>
+                </div>
+            </div>
+
+                <div class="border-t border-white/10 mt-12 pt-6 flex flex-col justify-center items-center gap-3">
+                    <p class="text-slate-500 text-sm">© 2026 Mini Projects. All rights reserved.</p>
+                    <p class="text-slate-500 text-sm">Built with
+                        <span class="text-indigo-400">HTML</span>,
+                        <span class="text-indigo-400">Tailwind CSS</span> & JavaScript
+                    </p>
+                </div>
+            </div>
+    </footer>
 
 </body>
 

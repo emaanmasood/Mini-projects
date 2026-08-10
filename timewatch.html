@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="bg-gray-800 rounded-3xl shadow-2xl w-96">
+        <h1 class="text-4xl font-bold text-center text-yellow-400 mb-8">
+            Digital Clock
+        </h1>
+        <div class="bg-black rounded-2xl p-6 text-center border-2 border-gray-600">
+            <h2 class="text-white text-lg mb-4">
+                Current Time
+            </h2>
+            <div class="inline-block bg-gray-900 px-8 py-5 rounded-xl border border-gray-500">
+                <h1 id="clock" class="text-5xl font-bold text-white tracking-widest">
+                    00:00:00
+                </h1>
+                <p id="ampm" class="text-yellow-400 text-xl mt-2">
+                    AM
+                </p>
+                <div class="w-full h-2 bg-yellow-400 rounded-full mt-4"></div>
+
+            </div>
+            <p id="date" class="text-gray-300 mt-6 text-lg">
+                sunday, July 12,2026
+            </p>
+
+        </div>
+
+    </div>
+
+    <script>
+        const clock = document.getElementById("clock");
+        const ampm = document.getElementById("ampm");
+        const date = document.getElementById("date");
+
+        function updateClock() {
+            const now = new Date();
+
+            let h = now.getHours();
+            let m = now.getMinutes();
+            let s = now.getSeconds();
+            ampm.innerText = h >= 12? "PM" : "AM";
+            h = h % 12 || 12;
+            clock.innerText = 
+            String(h).padStart(2, "0") + ":" +
+             String(m).padStart(2, "0") + ":" +
+             String(s).padStart(2, "0");
+             date.innerText = now.toLocaleDateString("en-US", {
+                weekday:"long",
+                month:"long",
+                day:"numeric",
+                year:"numeric",
+             });
+
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+
+    </script>
+
+</body>
+
+</html>
