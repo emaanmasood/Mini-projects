@@ -1,4 +1,10 @@
 export default async function handler(req, res){
+    res.setHeader("Access-control-Allow-Origin", "https://emaanmasood.github.io");
+    res.setHeader("Access-control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-control-Allow-Methods", "Content-type");
+    if(req.method === "OPTIONS"){
+        return res.status(200).end();
+    }
     if(req.method !== "POST"){
         return res.status(405).json({
             message: "Method not allowed"
