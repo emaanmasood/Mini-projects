@@ -115,26 +115,32 @@
                 <div class="w-full bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20">
                     <h2 class="text-2xl font-bold mb-8">Send a Message
                     </h2>
-                    <form class="space-y-5">
+                    <form id="contact-form" class="space-y-5">
                         <div>
                             <label class=" block mb-2 text-sm font-medium">
                                 Your Name
                             </label>
-                            <input type="text" placeholder="Enter your name"
+                            <input type="text" 
+                            name="name"
+                            placeholder="Enter your name"
                                 class="w-full px-5 py-4 rounded-xl bg-slate-900/70 border border-white/20 outline-none focus:border-indigo-500 transition">
                         </div>
                         <div>
                             <label class=" block mb-2 text-sm font-medium">
                                 Your Email
                             </label>
-                            <input type="email" placeholder="Enter your email"
+                            <input type="email" 
+                            name="email"
+                            placeholder="Enter your email"
                                 class="w-full px-5 py-4 rounded-xl bg-slate-900/70 border border-white/20 outline-none focus:border-indigo-500 transition">
                         </div>
                         <div>
                             <label class="block mb-2 text-sm font-medium">
                                 Your Message
                             </label>
-                            <textarea rows="6" placeholder="Enter your message"
+                            <textarea name="message"
+                            rows="6"
+                             placeholder="Enter your message"
                                 class="w-full px-5 py-4 rounded-xl bg-slate-900/70 border border-white/20 outline-none focus:border-indigo-500 transition resize-none"></textarea>
                         </div>
                         <button type="submit"
@@ -204,6 +210,38 @@
             } else {
                 menuIcon.classList.remove("fa-bars");
                 menuIcon.classList.add("fa-xmark");
+            }
+        });
+
+    </script>
+    <script>
+        const contactForm = document.getElementById("contact-form")
+        contactForm.addEventListener("submit", async function(e){
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get("name"),
+                email: formData.get("email"),
+                message: formData.get("message")
+            };
+            try {
+                const response = await fetch ("/api/contact",{
+                    method: "POST",
+                    headers:{
+                       "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    alert("message sent successfully");
+                    contactForm.reset();
+                }else {
+                    alert(result.message|| "something went wrong");
+                }
+            } catch(error){
+                console.error(error);
+                alert("Something went wrong. Please try again");
             }
         });
     </script>
